@@ -1,0 +1,16 @@
+@media (min-width: 768px) {
+    .signin-container {
+        margin-left: 35vw;
+        margin-right: 35vw;
+    }
+
+    .login-container {
+        margin-left: 35vw;
+        margin-right: 35vw;
+    }
+
+    main .api-container {
+        margin-left: 25vw;
+        margin-right: 25vw;
+    }
+}

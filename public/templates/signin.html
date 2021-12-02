@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/tablet.css" media="screen and (min-width: 768px)">
+    <link rel="stylesheet" href="../styles/desktop.css" media="screen and (min-width: 1080px)">
+    <title>Sign in | Trading Diaries</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <nav>
+                <div class="h1-container">
+                    <h1>
+                        Trading Diaries
+                    </h1>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="signin-container">
+            <h2>
+                Sign in
+            </h2>
+            <form action="">
+                <label for="name">Name </label>
+                <input type="text" name="name" id="signin-name"> <br />
+                <label for="email">Email </label>
+                <input type="email" name="email" id="signin-email"> <br />
+                <label for="password">Password </label>
+                <input type="password" name="password" id="signin-password"> <br />
+                <input type="button" value="Sign in" id="signin-button" class="signin-button">
+            </form>
+        </div>
+    </main>
+    <script type="module" src="../../src/index.js"></script>
+    <script type="module" src="../../src/clases/user.js"></script>
+</body>
+</html>

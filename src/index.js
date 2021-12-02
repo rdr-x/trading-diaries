@@ -1,43 +1,21 @@
-/**
- * FRONTEND
- * 1. pantalla de inicio
- * navbar con logo
- * carrousell de imágenes y un side text
- * login/signin en una esquina
- * 
- * 2. pantalla de login
- * navbar con logo
- * tarjeta-contenedor para poner datos de inicio de sesion
- * 
- * 
- * 3. pantalla de signin
- * navbar con logo 
- * tarjeta-contenedor para datos de registro
- * 
- * 4. pantalla principal
- * navbar con logo 
- * si hay trades, mostrar el último
- * si no, contenedor con un icono para agregar un trade
- * trade:
- * imagen o video del trade
- * contenedor al lado para leer datos (fecha, cantidad, tipo de trade, riesgo, target, fee)
- * 
- * BACKEND
- * Comportamiento
- * crear clases:
- *  a) user
- *  b) mediaplayer
- *  c) trade
- * 1. Servidor y Routing con Express.js
- * solicitudes API REST a la bd
- * 2. BD
- * Conectar bd a las instancias user, mediaplayer, trade
- * 
- * 3. Autenticación
- * Web2
- * Passport
- * 
- * Web3
- * web3.js 
- * conectar a wallet
- */
+import User from "./clases/user.js";
+const users = [];
+
+let newUser = new User("rodrigo ramos xochiteotzin", "rdrx20@gmail.com", "abc");
+console.log(newUser);
+console.log(newUser.addTrade("first trade"));
+
+// DOM
+const signinButton = document.getElementById('signin-button');
+signinButton.addEventListener('click', signIn)
+
+function signIn() {
+    const name = document.getElementById('signin-name').value;
+    const email = document.getElementById('signin-email').value;
+    const password = document.getElementById('signin-password').value;
+    let newUser = new User(name, email, password);
+    users.push(newUser)
+    console.log(newUser);
+    console.log(users);
+    return newUser;
+}

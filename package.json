@@ -2,10 +2,10 @@
   "name": "@rdrx/trading-diaries",
   "version": "1.0.0",
   "description": "Keep your trading journal under control",
-  "main": "index.js",
+  "main": "./routes/server.js",
   "scripts": {
-    "start": "node ./src/server",
-    "dev": "nodemon ./routes/server",
+    "start": "node ./src/server.js",
+    "dev": "nodemon ./routes/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -15,6 +15,15 @@
     "nodemon": "^2.0.15"
   },
   "dependencies": {
-    "express": "^4.17.1"
-  }
+    "express": "^4.17.1",
+    "node-fetch": "^3.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rdr-x/trading-diaries.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rdr-x/trading-diaries/issues"
+  },
+  "homepage": "https://github.com/rdr-x/trading-diaries#readme"
 }

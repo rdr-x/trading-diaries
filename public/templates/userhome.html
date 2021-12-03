@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/tablet.css" media="screen and (min-width: 768px)">
+    <link rel="stylesheet" href="../styles/desktop.css" media="screen and (min-width: 1080px)">
+    <title>Trading Diaries</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <nav>
+                <div class="h1-container">
+                    <h1>
+                        Trading Diaries
+                    </h1>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="api-container">
+            <h1>Price asks</h1>
+            <span id="asks"></span>
+            <h1>Price bids</h1>
+            <span id="bids"></span>
+        </div>
+        <script type="module" src="../../src/index.js"></script>
+        <script src="../../src/bitsoapi.js"></script>
+    </main>
+</body>
+</html>

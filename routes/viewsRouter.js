@@ -21,25 +21,44 @@ router.get('/', async (req, res, next) => {
 });
 
 router.get('/signin', async (req, res, next) => {
-  let signin = "signin.html";
-  res.sendFile(signin, options, function callback(err) {
-      if (err) {
-          next(err);
-      } else {
-          console.log("Sent: ", signin);
-      }
-  })
+    let signin = "signin.html";
+    res.sendFile(signin, options, function callback(err) {
+        if (err) {
+            next(err);
+        } else {
+            console.log("Sent: ", signin);
+        }
+    })
 });
 
 router.get('/login', async (req, res, next) => {
-  let login = "login.html";
-  res.sendFile(login, options, function callback(err) {
-      if (err) {
-          next(err);
-      } else {
-          console.log("Sent: ", login);
-      }
-  })
+    let login = "login.html";
+    res.sendFile(login, options, function callback(err) {
+        if (err) {
+            next(err);
+        } else {
+            console.log("Sent: ", login);
+        }
+    })
+});
+
+router.get('/users/:userid', async (req, res, next) => {
+    const { userid } = req.params;
+    const answ = await users.find(user => user.id == userid);
+    if (!answ) {
+        res.send({
+            message: userid + " no encontrado"
+        });
+    } else {
+        let userhome = "userhome.html";
+        res.sendFile(userhome, options, function callback(err) {
+            if (err) {
+                next(err);
+            } else {
+                console.log("Sent: ", userhome);
+            }
+        });
+    }
 });
 
 //exportar modulo

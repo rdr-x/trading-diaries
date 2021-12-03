@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const viewsRouter = require('../routes/viewsRouter');
 const PORT = process.env.PORT || 8000;
-const IP = "192.168.100.108";
+const IP = "192.168.100.9";
 
 //define router function
 function routerApi(app) {

@@ -42,12 +42,12 @@ router.get('/login', async (req, res, next) => {
     })
 });
 
-router.get('/users/:userid', async (req, res, next) => {
-    const { userid } = req.params;
-    const answ = await users.find(user => user.id == userid);
-    if (!answ) {
+router.get('/:username', async (req, res, next) => {
+    const { username } = req.params;
+    const user = await users.find(user => user.name == username);
+    if (!user) {
         res.send({
-            message: userid + " no encontrado"
+            message: username + " no encontrado"
         });
     } else {
         let userhome = "userhome.html";

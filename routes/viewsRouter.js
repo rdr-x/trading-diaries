@@ -42,24 +42,17 @@ router.get('/login', async (req, res, next) => {
     })
 });
 
-router.get('/:username', async (req, res, next) => {
-    const { username } = req.params;
-    const user = await users.find(user => user.name == username);
-    if (!user) {
-        res.send({
-            message: username + " no encontrado"
-        });
-    } else {
-        let userhome = "userhome.html";
-        res.sendFile(userhome, options, function callback(err) {
-            if (err) {
-                next(err);
-            } else {
-                console.log("Sent: ", userhome);
-            }
-        });
-    }
+router.get('/u/:user', async (req, res, next) => {
+    let userHome = "userhome.html";
+    res.sendFile(userHome, options, function callback(err) {
+        if (err) {
+            next(err);
+        } else {
+            console.log("Sent: ", userHome);
+        }
+    })
 });
+
 
 //exportar modulo
 module.exports = router;

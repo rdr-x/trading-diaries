@@ -7,6 +7,7 @@ const { models } = require('../../libs/sequelize');
 // plantilla de servicios para productos
 class TradeService {
     constructor() {
+        
     }
 
     async create(data) {

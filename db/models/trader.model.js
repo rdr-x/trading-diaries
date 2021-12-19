@@ -15,11 +15,6 @@ const TraderSchema = {
         allowNull: false,
         type: DataTypes.STRING,
     },
-    lastName: {
-        allowNull: false,
-        type: DataTypes.STRING,
-        field: 'last_name',
-    },
     createdAt: {
         allowNull: false,
         type: DataTypes.DATE,

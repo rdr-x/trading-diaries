@@ -1,6 +1,6 @@
 const { Model, DataTypes, Sequelize} = require('sequelize');
 const { TRADER_TABLE } = require('./trader.model');
-const { CATEGORY_TABLE } = require('./categoryModel');
+const { CATEGORY_TABLE } = require('./category.model');
 
 const TRADE_TABLE = 'trades';
 

@@ -1,10 +1,3 @@
-import User from "./clases/user.js";
-const users = [];
-
-let newUser = new User("rodrigo ramos xochiteotzin", "rdrx20@gmail.com", "abc");
-console.log(newUser);
-console.log(newUser.addTrade("first trade"));
-
 // DOM
 const signinButton = document.getElementById('signin-button');
 signinButton.addEventListener('click', signIn)

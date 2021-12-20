@@ -6,7 +6,7 @@ const categoriesRouter = require('./categories.router');
 const tradeRouter = require('./trade.router');
 const traderRouter = require('./trader.router');
 const PORT = process.env.PORT || 8000;
-const IP = "192.168.100.9";
+const IP = "192.168.43.231";
 
 //define router function
 function routerApi(app) {

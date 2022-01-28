@@ -1,12 +1,11 @@
 const express = require('express');
 const app = express();
+const { config } = require('../config/config');
 const viewsRouter = require('./viewsRouter');
 const usersRouter = require('./users.router');
 const categoriesRouter = require('./categories.router');
 const tradeRouter = require('./trade.router');
 const traderRouter = require('./trader.router');
-const PORT = process.env.PORT || 8000;
-const IP = "192.168.43.231";
 
 //define router function
 function routerApi(app) {
@@ -24,7 +23,7 @@ function routerApi(app) {
 
 routerApi(app)
 
-app.listen(PORT, IP, (err) => {
+app.listen(config.port, config.dbHost, (err) => {
     if (err) console.log(err);
-    console.log("Listening on http://" + IP + ":" + PORT + "/");
+    console.log("Listening on http://" + config.dbHost + ":" + config.port + "/");
 });

@@ -7,13 +7,13 @@ const consumingAPI = async (apiUrl) => {
         const answJson = await data.json(data);
         for (let i = 0; i < answJson.payload.asks.length; i++) {
             asks.appendChild(document.createTextNode(answJson.payload.asks[i].price.toString() + " "));
-            
+
         }
-        for (let i = 0; i < answJson.payload.asks.length; i++) {
+        for (let i = 0; i < answJson.payload.bids.length; i++) {
             bids.appendChild(document.createTextNode(answJson.payload.bids[i].price.toString() + " "))
-            
+
         }
-        
+
     } catch (error) {
         console.error(error);
     }
